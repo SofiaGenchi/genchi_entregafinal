@@ -16,3 +16,7 @@
     text-align: center;
     letter-spacing: 6px;
 }
+
+#taskList ul {
+    text-align: center;
+}

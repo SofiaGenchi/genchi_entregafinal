@@ -1,0 +1,22 @@
+li {
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 35%;
+}
+
+li button {
+    background-color: rgba(128, 0, 128, 0.466);
+    margin-left: 20px;
+    border-style: none;
+    height: max-content;
+    font-size: small;
+    color: white;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+li button:hover{
+    background-color: purple;
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './TaskList.css'
 import TaskForm from '../TaskForm/TaskForm';
+import TaskItem from '../TaskItem/TaskItem';
 export default function TaskList() {
     const [list, setList] = useState(() => {
         const savedTasks = localStorage.getItem('task');
@@ -38,9 +39,19 @@ export default function TaskList() {
         <h1>Lista de Tareas</h1>
         <h4>¿Qué vas a hacer hoy?</h4>
         <div id="formulario">
-            <TaskForm />
+            <TaskForm
+                handleSubmit={handleSubmit}
+                handleChange={handleChange}
+                inputValue={inputValue}
+            />
             <ul>
-                {/* TaskItem */}
+                {list.map((item, index) => (
+                    <TaskItem
+                        key={item}
+                        item={item}
+                        handleDelete={() => handleDelete(index)}
+                    />
+                ))}
             </ul>
         </div>
     </div>
