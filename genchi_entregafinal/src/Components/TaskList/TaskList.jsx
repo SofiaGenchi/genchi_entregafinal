@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-
+import './TaskList.css'
+import TaskForm from '../TaskForm/TaskForm';
 export default function TaskList() {
     const [list, setList] = useState(() => {
         const savedTasks = localStorage.getItem('task');
@@ -37,7 +38,7 @@ export default function TaskList() {
         <h1>Lista de Tareas</h1>
         <h4>¿Qué vas a hacer hoy?</h4>
         <div id="formulario">
-            {/* TaskForm */}
+            <TaskForm />
             <ul>
                 {/* TaskItem */}
             </ul>
